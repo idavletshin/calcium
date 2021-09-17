@@ -1,0 +1,299 @@
+/* Общие стили для кнопки */
+
+.button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}
+
+/* *** */
+
+/* flex-стили */
+
+.jc-space-between {
+  justify-content: space-between;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+/* *** */
+
+/* Цвет для кнопок */
+
+/* .--blue {
+  background: var(--dark-blue);
+} */
+
+/* .--black {
+  background: var(--card-bg);
+} */
+
+.--transparent {
+  background: transparent;
+}
+
+.--gradient-orange {
+  background: -webkit-linear-gradient(
+    45deg,
+    var(--dark-orange),
+    var(--light-orange)
+  );
+  background: linear-gradient(45deg, var(--dark-orange), var(--light-orange));
+}
+
+/* *** */
+
+/* Стилизация кнопки с шагами (возврата назад) */
+
+/* .previous-button {
+  max-width: max-content;
+  padding: 0;
+  background: transparent;
+  text-decoration: none;
+}
+
+.previous-button img {
+  height: 0.75rem;
+  margin-right: 1rem;
+}
+
+.previous-button__text {
+  width: max-content;
+  color: var(--yellow);
+  font-family: var(--second-font);
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.previous-button .previous-button__text:hover {
+  text-shadow: 0 0 0.3125rem var(--yellow);
+}
+
+@media screen and (max-width: 47.9375rem) {
+  .previous-button img {
+    margin-right: 0.725rem;
+    height: 0.625rem;
+  }
+
+  .previous-button__text {
+    font-size: 0.875rem;
+  }
+} */
+
+/* *** */
+
+/* Стилизация кнопки копирования в буфер обмена */
+
+/* .clipboard-button {
+  justify-content: center;
+  height: 3rem;
+  padding: 0.625rem;
+  padding: 0.375rem;
+  color: var(--white);
+  font-size: 0.875rem;
+  background: transparent;
+  border: 0.0625rem dashed var(--blue);
+  border-radius: 2rem;
+  transition: background 0.2s ease;
+}
+
+.clipboard-button:hover {
+  background: var(--blue);
+}
+
+.clipboard-button svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.5rem;
+}
+
+.clipboard-button:hover svg path {
+  stroke: var(--white);
+}
+
+.clipboard-button:active {
+  background: transparent;
+} */
+
+/* *** */
+
+/* Стилизация кнопки перехода на следующий шаг */
+
+.next-button {
+  height: 3rem;
+  padding: 0.625rem 1.5rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+}
+
+/* .next-button img {
+  height: 0.75rem;
+  transform: rotate(180deg);
+} */
+
+.next-button.--gradient-orange:hover {
+  background: var(--light-orange);
+}
+
+.next-button.--gradient-orange:active {
+  background: var(--dark-orange);
+}
+/* *** */
+
+/* Стилизация прозрачной кнопки */
+
+.transparent-button {
+  height: 3rem;
+  padding: 0.625rem 1.5rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+  border: 0.0625rem solid var(--white);
+  transition: background 0.2s ease;
+}
+
+.transparent-button:hover {
+  background: var(--light-orange);
+}
+
+.transparent-button:active {
+  background: transparent;
+}
+
+/* Стилизация фиолетовой кнопки */
+
+/* .purple-button {
+  height: 3rem;
+  padding: 0.625rem 1.5rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.purple-button img {
+  height: 0.75rem;
+  transform: rotate(180deg);
+}
+
+.purple-button:hover {
+  background: -webkit-linear-gradient(45deg, #6a1cf8, #a114f9);
+}
+
+.purple-button:active,
+.purple-button:focus {
+  background: var(--input-border);
+  outline: none;
+} */
+/* *** */
+
+/* .button-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: -0.75rem;
+} */
+
+/* .button-details img {
+  width: 1.25rem;
+  height: 1.25rem;
+} */
+
+/* .button__box {
+  display: flex;
+}
+
+.button-details__box {
+  position: relative;
+  height: 3rem;
+  min-width: 3rem;
+  width: 3rem;
+  margin-left: 1rem;
+  background: var(--card-bg);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button-details__box:hover {
+  background: var(--purple);
+}
+
+.button-details__box:active,
+.button-details__box:focus {
+  background: var(--input-border);
+  outline: none;
+}
+
+.button-details__box .button-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.button-details img {
+  width: 1.5rem;
+  height: 1.5rem;
+} */
+
+/* .context-menu {
+  position: absolute;
+  content: "";
+  display: none;
+  flex-direction: column;
+  top: 3.5rem;
+  right: 0;
+  background: var(--card-bg);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1.3125rem rgba(12, 12, 12, 0.8);
+  z-index: 1;
+}
+
+.button-details__box .context-menu {
+  background: var(--purple);
+}
+
+.context-menu__item {
+  position: relative;
+  padding: 0.75rem 1.875rem 0.75rem 5rem;
+  cursor: pointer;
+  user-select: none;
+} */
+
+/* .context-menu__item:hover {
+  background: var(--purple);
+} */
+
+/* .button-details.active ~ .context-menu {
+  display: flex;
+  padding: 0.75rem 0;
+} */
+
+/* .logout-icon:before {
+  position: absolute;
+  content: "";
+  left: 1.875rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: url(../images/log-out.svg);
+  background-size: contain;
+}
+
+.delete-icon:before {
+  position: absolute;
+  content: "";
+  left: 1.875rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  background: url(../images/close_24px\ copy.svg);
+  background-size: contain;
+} */

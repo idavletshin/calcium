@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Walletum</title>
+  </head>
+  <body>
+    <div class="main bg">
+      <div class="container">
+        <div class="main__wrapper">
+          <div class="main__left">
+            <img src="./images/calcium.svg" alt="calcium" />
+          </div>
+          <div class="main__right">
+            <h1 class="main__main-title">Calcium Web API</h1>
+            <h2 class="main__title">
+              Simplified API for multi-blockchain wallets
+              <br />
+              <a href="#" target="_blank">View API reference online</a>
+            </h2>
+            <div class="main__action-group">
+              <span>У вас уже есть учетная запись?</span>
+              <a href="/">Войти</a>
+            </div>
+
+            <form action="#" class="form">
+              <div class="form__text-field-container text-field-container">
+                <div class="text-field">
+                  <input
+                    id="accountTitle"
+                    class="text-field__input"
+                    type="text"
+                    placeholder="Account title"
+                  />
+                  <label for="accountTitle" class="text-field__label"
+                    >Имя пользователя</label
+                  >
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                </div>
+                <!-- primary / error / success -->
+                <div class="text-field-helper primary">
+                  <p class="primary-text">
+                    Minimum length is 8 character but longer is better
+                  </p>
+                  <p class="error-text">Error</p>
+                  <p class="success-text">Success</p>
+                </div>
+              </div>
+              <div class="form__text-field-container text-field-container">
+                <div class="text-field">
+                  <input
+                    id="password"
+                    class="text-field__input password"
+                    type="password"
+                    placeholder="Password"
+                  />
+                  <label for="password" class="text-field__label">Пароль</label>
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                  <span class="text-field__icon"></span>
+                </div>
+                <!-- primary / error / success -->
+                <div class="text-field-helper primary">
+                  <p class="primary-text">
+                    Minimum length is 8 character but longer is better
+                  </p>
+                  <p class="error-text">Error</p>
+                  <p class="success-text">Success</p>
+                </div>
+              </div>
+              <div class="form__text-field-container text-field-container">
+                <div class="text-field">
+                  <input
+                    id="confirmPassword"
+                    class="text-field__input password"
+                    type="password"
+                    placeholder="Confirm password"
+                  />
+                  <label for="confirmPassword" class="text-field__label"
+                    >Подтвердить пароль</label
+                  >
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                  <span class="text-field__icon"></span>
+                </div>
+                <!-- primary / error / success -->
+                <div class="text-field-helper primary">
+                  <p class="primary-text">
+                    Minimum length is 8 character but longer is better
+                  </p>
+                  <p class="error-text">Error</p>
+                  <p class="success-text">Success</p>
+                </div>
+              </div>
+              <button
+                class="next-button button --gradient-orange jc-center"
+                type="button"
+              >
+                Зарегистрироваться
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script>
+      const nextButton = document.querySelector(".next-button.button");
+
+      nextButton.addEventListener("click", () => {
+        window.location.href = "create-token.html";
+      });
+    </script>
+  </body>
+</html>

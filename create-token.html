@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Walletum</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__img" src="./images/calcium.svg" alt="Logo" />
+        <span class="logo__text"
+          >Calcium Web API
+          <br />
+          <small>Simplified API for multi-blockchain wallets</small>
+        </span>
+      </a>
+      <div class="header__menu menu">
+        <div class="menu__burger burger">
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Twitter</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Telegram</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">GitHub</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link active" href="#">Discord</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Coinmarketcap</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Calcium Network</a>
+          </li>
+          <li class="menu__item lang">
+            <ul class="lang__list">
+              <li class="lang__item">
+                <a class="lang__link active" href="#">Ru</a>
+              </li>
+              <li class="lang__item">
+                <a class="lang__link" href="#">En</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="main">
+      <div class="container">
+        <div class="main__wrapper">
+          <aside class="main__aside">
+            <ul class="aside-list">
+              <li class="aside-item">
+                <img src="./images/grid.svg" alt="tokens" />
+                Tokens
+              </li>
+              <li class="aside-item">
+                <label class="accordion">
+                  <input type="checkbox" name="checkbox-accordion" />
+                  <div class="accordion__header">
+                    <img src="./images/layers.svg" alt="playground" />
+                    API Playground
+                  </div>
+                  <ul class="accordion__content">
+                    <li class="accordion__item">
+                      <a href="#"> Account_Connect</a>
+                    </li>
+                    <li class="accordion__item">
+                      <a href="#"> Account_Disconnect</a>
+                    </li>
+                    <li class="accordion__item">
+                      <a href="#"> OpenRPC_GetSchema</a>
+                    </li>
+                    <li class="accordion__item">
+                      <a href="#"> Transaction_Send</a>
+                    </li>
+                    <li class="accordion__item">
+                      <a href="#"> Wallets_Balance</a>
+                    </li>
+                    <li class="accordion__item">
+                      <a href="#"> Wallets_GetInvoice</a>
+                    </li>
+                    <li class="accordion__item">
+                      <a href="#"> Wallets_GetInvoice</a>
+                    </li>
+                    <li class="accordion__item">
+                      <a href="#"> Wallets_GetInvoiceAddress</a>
+                    </li>
+                  </ul>
+                </label>
+              </li>
+              <li class="aside-item">
+                <img src="./images/user-x.svg" alt="logout" />
+                Logout
+              </li>
+            </ul>
+          </aside>
+          <div class="main__right">
+            <h2 class="main__title">Tokens</h2>
+            <form action="#" class="form hidden">
+              <div class="form__text-field-container text-field-container">
+                <div class="text-field">
+                  <input
+                    id="accountTitle"
+                    class="text-field__input"
+                    type="text"
+                    placeholder="Account title"
+                  />
+                  <label for="accountTitle" class="text-field__label"
+                    >Token title</label
+                  >
+                  <!-- no class / error / success -->
+                  <span class="text-field__line"></span>
+                </div>
+                <!-- primary / error / success -->
+                <div class="text-field-helper primary">
+                  <p class="primary-text">
+                    Minimum length is 8 character but longer is better
+                  </p>
+                  <p class="error-text">Error</p>
+                  <p class="success-text">Success</p>
+                </div>
+              </div>
+              <div class="form__action-group">
+                <button
+                  class="transparent-button button --transparent jc-center"
+                  type="button"
+                >
+                  Cancel
+                </button>
+                <button
+                  class="next-button button --gradient-orange jc-center"
+                  type="button"
+                >
+                  Create token
+                </button>
+              </div>
+            </form>
+            <div class="main__action-group">
+              <a href="#">Create token</a>
+              <a href="#">Refresh token list</a>
+            </div>
+            <ul class="token-list">
+              <li class="token-item">
+                uf1q5ldmyz33cpjmh4damhcyy5yfpvufk0ypesmmlt
+              </li>
+              <li class="token-item">
+                532ewsgf32g2n5hj4563amhcyy5yfpvufk0y52hgnt
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script>
+      const cancelButton = document.querySelector(".transparent-button.button");
+      const nextButton = document.querySelector(".next-button.button");
+      const form = document.querySelector(".form");
+      const createToken = document.querySelector(
+        ".main__action-group a:first-child"
+      );
+      const accountTitle = document.getElementById("accountTitle");
+
+      createToken.addEventListener("click", () => {
+        form.classList.remove("hidden");
+      });
+
+      cancelButton.addEventListener("click", () => {
+        form.classList.add("hidden");
+        accountTitle.value = "";
+      });
+    </script>
+  </body>
+</html>
